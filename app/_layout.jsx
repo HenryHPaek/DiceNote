@@ -10,6 +10,11 @@ export default function RootLayout() {
    async function initDB() {
       try {
          const db = await SQLite.openDatabaseAsync('diceNote.db')
+
+         {/*
+            checks if data from previous version exists.
+            if exists, delete it.
+         */}
          const isDataCleared = await AsyncStorage.getItem('dataCleared')
          if (!isDataCleared) {
             await db.runAsync(`DROP TABLE IF EXISTS notes;`)
