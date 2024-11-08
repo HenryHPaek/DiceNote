@@ -1,3 +1,4 @@
+# DiceNote
 A mobile note-taking application that allows users:
 -	Make notes, sort, edit, search, archive, recycle, delete
 -	Choose items (notes) randomly while keeping chosen items history
